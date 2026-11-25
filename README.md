@@ -42,6 +42,7 @@ SQL queries were used for:
 - Duplicate record checking
 
 ## Power BI Dashboard
+Dashboard_ss.png
 The interactive dashboard includes:
 - Total Records
 - Average AQI
