@@ -1,0 +1,19 @@
+USE AirQualityDB
+GO
+SELECT TOP 10
+    Date,
+    CAST(Station AS NVARCHAR(100)) AS Station,
+    AQI_Value,
+    CAST(AQI_Index AS NVARCHAR(100)) AS AQI_Category
+FROM AirQuality
+WHERE TRY_CONVERT(FLOAT, AQI_Value) IS NOT NULL
+ORDER BY TRY_CONVERT(FLOAT, AQI_Value) DESC;
+
+SELECT
+    CAST(Station AS NVARCHAR(100)) AS Station,
+    COUNT(*) AS High_AQI_Records,
+    MAX(TRY_CONVERT(FLOAT, AQI_Value)) AS Highest_AQI
+FROM AirQuality
+WHERE TRY_CONVERT(FLOAT, AQI_Value) > 150
+GROUP BY CAST(Station AS NVARCHAR(100))
+ORDER BY High_AQI_Records DESC;

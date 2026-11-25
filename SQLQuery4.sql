@@ -1,0 +1,24 @@
+USE AirQualityDB;
+GO
+
+SELECT
+    CAST(Station AS NVARCHAR(100)) AS Station,
+    ROUND(AVG(TRY_CONVERT(FLOAT, AQI_Value)), 2) AS Average_AQI
+FROM AirQuality
+GROUP BY CAST(Station AS NVARCHAR(100))
+ORDER BY Average_AQI DESC;
+
+SELECT
+    CAST(Station AS NVARCHAR(100)) AS Station,
+
+    ROUND(AVG(TRY_CONVERT(FLOAT, PM2_5)), 2)
+        AS Average_PM25,
+
+    ROUND(AVG(TRY_CONVERT(FLOAT, PM10)), 2)
+        AS Average_PM10
+
+FROM AirQuality
+
+GROUP BY CAST(Station AS NVARCHAR(100))
+
+ORDER BY Average_PM10 DESC;
