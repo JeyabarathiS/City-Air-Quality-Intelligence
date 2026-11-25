@@ -43,7 +43,7 @@ SQL queries were used for:
 
 ## Power BI Dashboard
 ## Dashboard Preview
-![City Air Quality Dashboard](Dashboard_ss.png)
+![City Air Quality Dashboard](PowerBI/Dashboard_ss.png)
 
 The interactive dashboard includes:
 - Total Records
