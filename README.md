@@ -42,7 +42,8 @@ SQL queries were used for:
 - Duplicate record checking
 
 ## Power BI Dashboard
-Dashboard_ss.png
+## Dashboard Preview
+![City Air Quality Dashboard](dashboard_screenshot.png)
 The interactive dashboard includes:
 - Total Records
 - Average AQI
