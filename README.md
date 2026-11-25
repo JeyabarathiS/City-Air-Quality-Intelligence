@@ -43,7 +43,8 @@ SQL queries were used for:
 
 ## Power BI Dashboard
 ## Dashboard Preview
-![City Air Quality Dashboard](dashboard_screenshot.png)
+![City Air Quality Dashboard](Dashboard_ss.png)
+
 The interactive dashboard includes:
 - Total Records
 - Average AQI
